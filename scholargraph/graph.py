@@ -96,7 +96,12 @@ class EvidenceGraph:
 
     @classmethod
     def import_json(cls, path: Path):
-        raw = json.loads(path.read_text())
+        return cls.from_data(json.loads(path.read_text()))
+
+    @classmethod
+    def from_data(cls, raw):
+        if not isinstance(raw, dict):
+            raise ValueError("graph must be an object")
         g = cls()
         for x in raw.get("sources", []):
             g.add_source(Source(**x))

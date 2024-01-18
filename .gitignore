@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 dist/
+
+*.snapshot.json
+*.snapshot.json.lock
