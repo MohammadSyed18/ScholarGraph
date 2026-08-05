@@ -1,0 +1,9 @@
+[project]
+name = "scholargraph"
+version = "1.0.0"
+requires-python = ">=3.12"
+description = "Provenance-aware evidence graph"
+[project.scripts]
+scholargraph = "scholargraph.cli:main"
+[tool.setuptools]
+packages = ["scholargraph"]
